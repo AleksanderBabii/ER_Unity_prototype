@@ -14,7 +14,7 @@ public class RoadSpawner : MonoBehaviour
     void Start()
     {
         for (int i = 0; i < 5; i++)
-        {
+        { 
             SpawnTile();
         }
         

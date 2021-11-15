@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObstacleHit : MonoBehaviour
 {
+    
     PlayerController playerController;
     // Start is called before the first frame update
     void Start()
@@ -13,17 +15,13 @@ public class ObstacleHit : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Car")
         {
-            // Kill the Player
+           // Kill the Player
             playerController.Die();
         }
 
 
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

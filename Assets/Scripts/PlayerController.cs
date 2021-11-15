@@ -5,12 +5,13 @@ using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 35.0f;
+    
+    public float speed = 35.0f;
     private float turnSpeed = 45.0f;
     private float horizontalInput;
-    private float verticalInput;
     bool alive = true;
 
+    public float speedIncreaseByPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +28,7 @@ public class PlayerController : MonoBehaviour
         {
             Die();
         }
-        verticalInput = Input.GetAxis("Vertical");
-
+       
         // Moves the car forweard.
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         alive = false;
-        // Restert the game
+        // Restart the game
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
