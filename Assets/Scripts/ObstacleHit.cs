@@ -17,7 +17,7 @@ public class ObstacleHit : MonoBehaviour
     {
         if (collision.gameObject.name == "Car")
         {
-           // Kill the Player
+            // Kill the Player
             playerController.Die();
         }
 
