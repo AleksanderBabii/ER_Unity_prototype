@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!alive) return;
 
-        horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = SimpleInput.GetAxis("Horizontal");
         if (transform.position.y < -5)
         {
             Die();
